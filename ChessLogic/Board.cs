@@ -18,8 +18,18 @@ namespace ChessLogic
 
         public Piece this[Position pos]
         {
-            get { return this[pos.Row, pos.Column]; }
-            set { this[pos.Row, pos.Column] = value; }
+            get
+            {
+                if (!IsInside(pos))
+                    throw new ArgumentOutOfRangeException($"Accessing invalid position: ({pos.Row}, {pos.Column})");
+                return this[pos.Row, pos.Column];
+            }
+            set
+            {
+                if (!IsInside(pos))
+                    throw new ArgumentOutOfRangeException($"Accessing invalid position: ({pos.Row}, {pos.Column})");
+                this[pos.Row, pos.Column] = value;
+            }
         }
 
         public static Board Initial()
