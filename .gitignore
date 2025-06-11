@@ -1,1 +1,33 @@
+# Ignore Visual Studio temp files, build results, and user-specific files
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+
+# Build results
+bin/
+obj/
+
+# Visual Studio folders
 .vs/
+
+# Rider folders (if applicable)
+.idea/
+
+# Auto-generated files
+Generated\
+
+# NuGet packages
+*.nupkg
+packages/
+*.snupkg
+
+# Logs
+*.log
+
+# Other
+TestResults/
+*.db
